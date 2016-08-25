@@ -12,6 +12,7 @@ function clickHandle(info, tab){
 		convertText(raw);
 	}
 	chrome.tabs.sendMessage(tab.id, {text: convertedText});
+	convertedText = "";
 }
 
 function convertText(raw){ //adds 0xFEE0 (0xFF00 - 0x20) to the input character to shift it into fullwidth
