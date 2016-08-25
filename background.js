@@ -2,7 +2,7 @@ var convertedText = "";
 
 chrome.tabs.executeScript(null,{file:"contentscript.js"});
 var context1 = chrome.contextMenus.create({
-	"title": "WIDEN", 
+	"title": "GET WIDE", 
 	"contexts": ["editable"], 
 	"onclick": clickHandle});
 
