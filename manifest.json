@@ -2,9 +2,25 @@
 	"name": "WIDETEXT",
 	"description": "Context menu to make your text﻿ ﻿ｗｉｄｅ.",
 	"version": "0.1",
-	"permissions": ["contextMenus", "activeTab", "webNavigation"],
+	"permissions": ["contextMenus", "webNavigation", "http://*/*", "https://*/*", "clipboardRead", "clipboardWrite"],
 	"background": {
-		"scripts": ["main.js"]
+		"scripts": ["background.js"]
+	},
+	"content_scripts": [
+		{
+			"matches": [
+				"*://*/*"
+			],
+			"js": [
+				"content.js"
+			],
+			"all_frames": true
+		}
+	],
+	"icons": {
+		"16":"16_icon.png",
+		"64":"64_icon.png",
+		"128":"128_icon.png"
 	},
 	"manifest_version": 2
 }
