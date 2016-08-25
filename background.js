@@ -12,7 +12,6 @@ function clickHandle(info, tab){
 		convertText(raw);
 	}
 	chrome.tabs.sendMessage(tab.id, {text: convertedText});
-	console.log("sent");
 }
 
 function convertText(raw){ //adds 0xFEE0 (0xFF00 - 0x20) to the input character to shift it into fullwidth
@@ -27,6 +26,6 @@ function convertText(raw){ //adds 0xFEE0 (0xFF00 - 0x20) to the input character 
         }
         convertedText += String.fromCharCode(hexCode);
 	}
-	// console.log(convertedText);
+	console.log(convertedText);
 	return convertedText;
 }

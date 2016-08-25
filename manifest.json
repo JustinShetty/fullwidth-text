@@ -1,7 +1,7 @@
 {
 	"name": "WIDETEXT",
 	"description": "Context menu to make your text﻿ ﻿ｗｉｄｅ.",
-	"version": "0.1",
+	"version": "1.0",
 	"permissions": ["contextMenus", "webNavigation", "http://*/*", "https://*/*", "clipboardRead", "clipboardWrite"],
 	"background": {
 		"scripts": ["background.js"]
