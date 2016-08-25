@@ -27,6 +27,6 @@ function convertText(raw){ //adds 0xFEE0 (0xFF00 - 0x20) to the input character 
         }
         convertedText += String.fromCharCode(hexCode);
 	}
-	console.log(convertedText);
+	// console.log(convertedText);
 	return convertedText;
 }
