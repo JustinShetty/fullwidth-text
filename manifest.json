@@ -1,0 +1,13 @@
+{
+	"name": "widetext",
+	"description": "context menu to make your text﻿ ﻿ｗｉｄｅ",
+	"version": "1.0",
+	"icons": {
+		"16": "16_icon.png"
+	},
+	"permissions": ["contextMenus"],
+	"background": {
+		"scripts": ["main.js"]
+	},
+	"manifest_version": 2
+}
