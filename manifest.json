@@ -1,4 +1,6 @@
-{
+{	
+	"manifest_version": 2,
+
 	"name": "WIDE TEXT",
 	"description": "Context menu to make your text﻿ ﻿ｗｉｄｅ.",
 	"version": "1.0",
@@ -21,6 +23,5 @@
 		"16":"16_icon.png",
 		"64":"64_icon.png",
 		"128":"128_icon.png"
-	},
-	"manifest_version": 2
+	}
 }
