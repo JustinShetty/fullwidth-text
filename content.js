@@ -1,3 +1,5 @@
+var goFlag = true;
+
 chrome.runtime.onMessage.addListener(function (request) {
     replaceSelection(document.activeElement, request.text);
 });
@@ -7,22 +9,11 @@ chrome.runtime.onMessage.addListener(function (request) {
 // modified text passed by the onclick handler in background.js
 
 function replaceSelection(elem, text) { 
-    var te = document.createEvent('TextEvent'); 
-    te.initTextEvent('textInput', true, true, window, text);
-    elem.dispatchEvent(te); 
+    if(goFlag){
+    	goFlag = false;
+	    var te = document.createEvent('TextEvent'); 
+	    te.initTextEvent('textInput', true, true, window, text);
+	    elem.dispatchEvent(te);
+	}
+	setTimeout(function(){goFlag = true;}, 200); //prevents converted text from being typed too many times when onMessage triggers multiple times
 }
-
-// function replaceSelection(elem, text) {
-// 	setTextDiv(elem, text);
-// 	if(elem.tagName == "DIV"){
-// 		????
-// 	}
-// 	else{
-// 		var start = elem.selectionStart;
-// 	    var end = elem.selectionEnd;
-// 	    elem.value = elem.value.slice(0, start) + text + elem.value.substr(end);
-// 	    elem.selectionStart = start + text.length;
-// 	    elem.selectionEnd = elem.selectionStart;
-// 	}
-// }
-
